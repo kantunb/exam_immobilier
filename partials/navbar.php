@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand" href="http://localhost:8888/whiskyBar/index.php">Mes logements</a>
+    <a class="navbar-brand" href="./index.php">Mes logements</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,7 +21,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#connexion">
+            <button type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#connexion">
                 Se connecter
             </button>
 

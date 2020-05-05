@@ -11,13 +11,13 @@ $logements = $response->fetchAll(PDO::FETCH_ASSOC);
 
 // Fonctoin raccouricir le texte
 
-function resizeText($text) {   
+function resizeText($text)
+{
     // (strlen($text) > 0) ? $text : substr($text, 0, 100) . "...";
 
-    if(strlen($text) < 80) {
+    if (strlen($text) < 80) {
         $textCut = $text;
-    }
-    else {
+    } else {
         $textCut = substr($text, 0, 80) . "...";
     }
     return $textCut;
@@ -77,6 +77,9 @@ function resizeText($text) {
                                                 <?= resizeText($logement['description']) ?></li>
                                         </ul>
                                     </p>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="./show.php?id=<?= $logement['id_logement'] ?>"><button type="button" class="btn btn-primary">+ d'info</button></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

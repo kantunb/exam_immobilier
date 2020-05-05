@@ -8,11 +8,11 @@ $response->execute();
 $logements = $response->fetchAll(PDO::FETCH_ASSOC);
 
 
-var_dump($_POST);
+// var_dump($_POST);
 
-var_dump($_FILES);
+// var_dump($_FILES);
 
-var_dump(pathinfo($_FILES['photo']['name']));
+// var_dump(pathinfo($_FILES['photo']['name']));
 
 // Fonction pour tester le type de fichier (extension et mime)
 function photoCheckFormat() {
@@ -78,3 +78,5 @@ if (!photoCheckFormat()) {
         echo "Tout est OK";
     }
 }
+
+header('Location: ../index.php');

@@ -19,6 +19,8 @@
 <body>
     <header>
 
+        <?php include './partials/navbar.php' ?>
+
     </header>
     <main>
         <div class="album py-5 bg-light">
@@ -27,7 +29,7 @@
                 <div class="row">
                     <div class="form-group">
                         <label for="">Ajouter un logement</label>
-                        <form action="./action/create.php" method="POST" enctype="multipart/form-data" >
+                        <form action="./action/create.php" method="POST" enctype="multipart/form-data">
 
                             <label id="titre" class="form-text text-muted">Titre</label>
                             <input type="text" class="form-control" name="titre" aria-describedby="titre" value="" required>
@@ -69,6 +71,8 @@
 
     </main>
     <footer>
+
+        <?php include './partials/footer.php' ?>
 
     </footer>
     <!-- Optional JavaScript -->
