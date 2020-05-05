@@ -31,7 +31,7 @@ var_dump('photo format' .  photoCheckFormat());
 // Fonction pour controler la taille de la photo uploadée
 function photoCheckSize() {
     $imageSize = $_FILES['photo']['size'];
-    return ($imageSize <= 375000);
+    return ($imageSize <= 3750000);
 }
 var_dump('photoSize'.photoCheckSize());
 
@@ -79,4 +79,4 @@ if (!photoCheckFormat()) {
     }
 }
 
-header('Location: ../index.php');
+// header('Location: ../index.php');
