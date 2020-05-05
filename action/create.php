@@ -76,7 +76,6 @@ if (!photoCheckFormat()) {
             'description'   => $_POST['description'],
         ]);
         echo "Tout est OK";
+        header('Location: ../index.php');
     }
 }
-
-// header('Location: ../index.php');
