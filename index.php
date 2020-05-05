@@ -9,6 +9,20 @@ $logements = $response->fetchAll(PDO::FETCH_ASSOC);
 
 // var_dump($logements);
 
+// Fonctoin raccouricir le texte
+
+function resizeText($text) {   
+    // (strlen($text) > 0) ? $text : substr($text, 0, 100) . "...";
+
+    if(strlen($text) < 80) {
+        $textCut = $text;
+    }
+    else {
+        $textCut = substr($text, 0, 80) . "...";
+    }
+    return $textCut;
+}
+
 ?>
 
 <!doctype html>
@@ -41,29 +55,26 @@ $logements = $response->fetchAll(PDO::FETCH_ASSOC);
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
-                                    <h2><?= $logement['titre'] ?></h2>
+                                    <h2><?= resizeText($logement['titre']) ?></h2>
+                                    <div class="car-body">
+                                        <img src="./img/<?= $logement['photo'] ?>" class="img-fluid" alt="Photo de <?= resizeText($logement['titre']) ?>">
+                                    </div>
                                     <p>
                                         <strong>Coordonnées</strong><br>
                                         <ul>
-                                            <li>Adresse : <?= $logement['adresse'] ?></li>
+                                            <li>Adresse : <?= resizeText($logement['adresse']) ?></li>
                                             <li>Code postal : <?= $logement['cp'] ?></li>
-                                            <li>Ville : <?= $logement['ville'] ?></li>
+                                            <li>Ville : <?= resizeText($logement['ville']) ?></li>
                                         </ul>
                                     </p>
                                     <p>
                                         <strong>Informations</strong>
                                         <ul>
-                                            <li>Type: <?= $logement['type'] ?> mètres</li>
+                                            <li>Type: <?= $logement['type'] ?></li>
                                             <li>Surface: <?= $logement['surface'] ?> m2</li>
                                             <li>Prix: <?= $logement['prix'] ?> euros</li>
                                             <li>Description:<br>
-                                                <?= $logement['description'] ?> mètres</li>
-                                            <li>Photo<br>
-                                                <div class="car-body">
-                                                    <img src="./img/<?= $logement['photo'] ?>" class="img-fluid" alt="Photo de <?= $logement['titre'] ?>">
-                                                </div>
-                                            </li>
-
+                                                <?= resizeText($logement['description']) ?></li>
                                         </ul>
                                     </p>
                                 </div>

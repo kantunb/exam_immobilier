@@ -1,5 +1,10 @@
+<?php
+
+
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <title>Exam PHP</title>
@@ -22,7 +27,7 @@
                 <div class="row">
                     <div class="form-group">
                         <label for="">Ajouter un logement</label>
-                        <form action="./create.php" method="POST">
+                        <form action="./action/create.php" method="POST" enctype="multipart/form-data" >
 
                             <label id="titre" class="form-text text-muted">Titre</label>
                             <input type="text" class="form-control" name="titre" aria-describedby="titre" value="" required>
