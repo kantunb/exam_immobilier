@@ -20,3 +20,11 @@ description TEXT
 );
 
 SELECT * FROM logement;
+
+USE immobilier;
+
+CREATE USER 'quentin' IDENTIFIED BY 'J-#s34OH\4Gq$?wb' ;
+
+
+CREATE USER 'quentin' IDENTIFIED BY 'J-#s34OH\4Gq$?wb' ;
+
